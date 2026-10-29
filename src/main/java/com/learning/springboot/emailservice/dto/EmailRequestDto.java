@@ -1,5 +1,6 @@
 package com.learning.springboot.emailservice.dto;
 
+import com.learning.springboot.emailservice.EmailTemplate;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
@@ -20,4 +21,6 @@ public class EmailRequestDto {
     private String message;
 
     private String subject;
+
+    private EmailTemplate emailTemplate;
 }

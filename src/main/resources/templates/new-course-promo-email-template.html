@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Course Announcement</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #cbd5e1;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="padding: 40px 16px;">
+    <tr>
+      <td align="center">
+        <!-- Main Container -->
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 580px; background-color: #0f172a; border-radius: 16px; border: 1px solid #1e293b; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);">
+          
+          <!-- Top Accent Bar -->
+          <tr>
+            <td height="3" style="background-color: #334155; line-height: 3px; font-size: 0;">&nbsp;</td>
+          </tr>
+
+          <!-- Header Section -->
+          <tr>
+            <td style="padding: 36px 36px 20px 36px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td>
+                    <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #94a3b8;">
+                      SKIPGREY ACADEMY
+                    </span>
+                  </td>
+                  <td align="right">
+                    <span style="display: inline-block; background-color: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">
+                      NEW RELEASE
+                    </span>
+                  </td>
+                </tr>
+              </table>
+
+              <h1 style="margin: 24px 0 10px 0; font-size: 26px; line-height: 1.25; font-weight: 800; color: #f8fafc; letter-spacing: -0.02em;">
+                Level Up Your Engineering Skills
+              </h1>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #94a3b8;">
+                We are excited to announce that a brand-new, production-oriented curriculum is now open for enrollment.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Course Hero Card -->
+          <tr>
+            <td style="padding: 0 36px 28px 36px;">
+              <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px;">
+                
+                <!-- Course Name & Status -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 20px;">
+                  <tr>
+                    <td valign="top">
+                      <div style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">Course Title</div>
+                      <div style="font-size: 17px; font-weight: 700; color: #f8fafc; line-height: 1.35;" th:text="${courseName}">Distributed Systems Architecture</div>
+                    </td>
+                    <td valign="top" align="right" style="padding-left: 12px;">
+                      <span style="display: inline-block; background-color: #0f172a; color: #e2e8f0; border: 1px solid #475569; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; white-space: nowrap;">
+                        Open for Enrollment
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- 3-Column Metrics Grid -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top: 1px solid #334155; padding-top: 16px;">
+                  <tr>
+                    <td width="33%" valign="top" style="padding-right: 8px;">
+                      <div style="font-size: 10px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em;">INSTRUCTOR</div>
+                      <div style="font-size: 13px; font-weight: 600; color: #e2e8f0; margin-top: 3px;" th:text="${instructorName}">Alex Morgan</div>
+                    </td>
+                    <td width="33%" valign="top" style="border-left: 1px solid #334155; padding-left: 14px; padding-right: 8px;">
+                      <div style="font-size: 10px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em;">START DATE</div>
+                      <div style="font-size: 13px; font-weight: 600; color: #e2e8f0; margin-top: 3px;" th:text="${startDate}">November 15, 2026</div>
+                    </td>
+                    <td width="33%" valign="top" style="border-left: 1px solid #334155; padding-left: 14px;">
+                      <div style="font-size: 10px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em;">DURATION</div>
+                      <div style="font-size: 13px; font-weight: 600; color: #e2e8f0; margin-top: 3px;" th:text="${duration}">8 Weeks</div>
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+            </td>
+          </tr>
+
+          <!-- Curriculum Highlights -->
+          <tr>
+            <td style="padding: 0 36px 32px 36px;">
+              <div style="font-size: 12px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;">
+                Curriculum Highlights
+              </div>
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 12px;">
+                <tr>
+                  <td width="22" valign="top" style="color: #94a3b8; font-size: 14px; line-height: 1.5; font-weight: 700;">&bull;</td>
+                  <td style="font-size: 13px; line-height: 1.6; color: #cbd5e1;">
+                    <strong style="color: #f1f5f9;">Architecture &amp; Distributed Systems:</strong> Hands-on system design patterns, resilient backend pipelines, and real-world microservices.
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 12px;">
+                <tr>
+                  <td width="22" valign="top" style="color: #94a3b8; font-size: 14px; line-height: 1.5; font-weight: 700;">&bull;</td>
+                  <td style="font-size: 13px; line-height: 1.6; color: #cbd5e1;">
+                    <strong style="color: #f1f5f9;">Production-Grade Codebase:</strong> Build end-to-end applications adhering to clean architecture, automated testing, and CI/CD pipelines.
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td width="22" valign="top" style="color: #94a3b8; font-size: 14px; line-height: 1.5; font-weight: 700;">&bull;</td>
+                  <td style="font-size: 13px; line-height: 1.6; color: #cbd5e1;">
+                    <strong style="color: #f1f5f9;">Mentorship &amp; Peer Reviews:</strong> Direct code reviews, architecture discussions, and office hours with veteran engineers.
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Call to Action Button -->
+              <div style="text-align: center; margin-top: 34px;">
+                <a href="https://academy.skipgrey.com" target="_blank" style="display: inline-block; background-color: #f8fafc; color: #0f172a; font-weight: 700; font-size: 13px; letter-spacing: 0.02em; text-decoration: none; padding: 13px 32px; border-radius: 8px;">
+                  View Syllabus &amp; Enroll &rarr;
+                </a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="border-top: 1px solid #1e293b; padding: 24px 36px; text-align: center;">
+              <p style="margin: 0 0 6px 0; font-size: 12px; color: #64748b;">
+                Questions? Visit <a href="https://help.skipgrey.com" target="_blank" style="color: #94a3b8; text-decoration: underline; font-weight: 600;">help.skipgrey.com</a>
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #475569;">
+                &copy; 2026 SkipGrey Academy. You received this email because you are registered at SkipGrey Academy.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
