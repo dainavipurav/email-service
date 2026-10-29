@@ -14,7 +14,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Validated
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/api")
 public class EmailController {
 
     private final EmailService emailService;
