@@ -1,39 +1,25 @@
 package com.learning.springboot.emailservice.dto;
 
-import com.learning.springboot.emailservice.EmailTemplate;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Map;
+import java.time.LocalDate;
 
-public class StudentRegistrationEmailDto implements EmailPayload{
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class StudentRegistrationEmailDto {
 
-    String recipient;
-    String studentName;
-    String courseName;
-    String registrationDate;
-    String studentStatus;
+    private String recipient;
 
-    @Override
-    public String recipient() {
-        return recipient;
-    }
+    private String studentName;
 
-    @Override
-    public String subject() {
-        return EmailTemplate.STUDENT_REGISTRATION_EMAIL_TEMPLATE.getSubject() + studentName;
-    }
+    private String courseName;
 
-    @Override
-    public EmailTemplate emailTemplate() {
-        return EmailTemplate.STUDENT_REGISTRATION_EMAIL_TEMPLATE;
-    }
+    private LocalDate registrationDate;
 
-    @Override
-    public Map<String, Object> templateVariables() {
-        return Map.of(
-                "studentName", studentName,
-                "courseName", courseName,
-                "registrationDate", registrationDate,
-                "studentStatus", studentStatus
-        );
-    }
+    private String studentStatus;
 }

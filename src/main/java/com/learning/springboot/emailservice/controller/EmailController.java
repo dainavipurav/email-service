@@ -1,7 +1,6 @@
 package com.learning.springboot.emailservice.controller;
 
 import com.learning.springboot.emailservice.EmailTemplate;
-import com.learning.springboot.emailservice.dto.EmailPayload;
 import com.learning.springboot.emailservice.dto.EmailRequestDto;
 import com.learning.springboot.emailservice.dto.SuccessResponseDto;
 import com.learning.springboot.emailservice.service.EmailService;
@@ -15,25 +14,20 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Validated
 @RestController
-@RequestMapping("/v1/email")
+@RequestMapping("/v1")
 public class EmailController {
 
     private final EmailService emailService;
 
-    @PostMapping
+    @PostMapping("/email")
     public SuccessResponseDto sendEmail(@Valid @RequestBody EmailRequestDto request){
         return emailService.sendEmail(request);
     }
 
-    @PostMapping
-    public SuccessResponseDto sendTemplateEmail(String to, String subject, EmailTemplate emailTemplate, Map<String, Object> variables){
-        return emailService.sendHtmlTemplateEmail(to, subject, emailTemplate.getTemplateName(), variables);
+    @PostMapping("/templateEmail")
+    public SuccessResponseDto sendTemplateEmail(@RequestParam String to,
+                                                @RequestParam EmailTemplate emailTemplate,
+                                                @RequestBody Map<String, Object> variables){
+        return emailService.sendHtmlTemplateEmail(to, emailTemplate.getSubject(), emailTemplate.getTemplateName(), variables);
     }
-
-    /*"imismail885@gmail.com", "Email from great Dainavi Purav", "student-registration-email-template", Map.of(
-            "studentName", "Ismail",
-            "courseName", "Algebra",
-            "registrationDate", "12/10/2026",
-            "studentStatus", "ENROLLED"
-            )*/
 }
