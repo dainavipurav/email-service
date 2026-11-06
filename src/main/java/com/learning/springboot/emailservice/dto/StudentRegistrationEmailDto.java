@@ -19,7 +19,9 @@ public class StudentRegistrationEmailDto {
 
     private String courseName;
 
-    private LocalDate registrationDate;
+    private LocalDate enrollmentDate;
 
     private String studentStatus;
+
+    private String invoiceDownloadPath;
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instructor Registration Confirmation</title>
+  <title>Instructor Enrollment Confirmation</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #334155;">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f1f5f9; padding: 40px 15px;">
@@ -21,7 +21,7 @@
                 Welcome to the Faculty!
               </h1>
               <p style="margin: 8px 0 0; font-size: 14px; color: #cbd5e1;">
-                Instructor Registration Confirmed &bull; SkipGrey Academy
+                Instructor Enrollment Confirmed &bull; SkipGrey Academy
               </p>
             </td>
           </tr>
@@ -33,7 +33,7 @@
                 Hello <strong th:text="${instructorName}">Jane Doe</strong>,
               </p>
               <p style="font-size: 14px; line-height: 1.6; color: #475569; margin-bottom: 24px;">
-                Welcome to SkipGrey Academy. Your instructor profile and course lead registration have been successfully processed. Below are your faculty assignment details:
+                Welcome to SkipGrey Academy. Your instructor profile and course lead enrollment have been successfully processed. Below are your faculty assignment details:
               </p>
 
               <!-- Information Table Card -->
@@ -48,7 +48,7 @@
                 </tr>
                 <tr>
                   <td style="padding: 8px 0; color: #64748b; font-size: 13px; border-top: 1px dashed #e2e8f0;">Date of Onboarding:</td>
-                  <td style="padding: 8px 0; color: #0f172a; font-weight: 600; text-align: right; font-size: 14px; border-top: 1px dashed #e2e8f0;" th:text="${registrationDate}">2026-10-29</td>
+                  <td style="padding: 8px 0; color: #0f172a; font-weight: 600; text-align: right; font-size: 14px; border-top: 1px dashed #e2e8f0;" th:text="${enrollmentDate}">2026-10-29</td>
                 </tr>
                 <tr>
                   <td style="padding: 8px 0; color: #64748b; font-size: 13px; border-top: 1px dashed #e2e8f0;">Account Status:</td>
@@ -56,6 +56,14 @@
                     <span style="background-color: #ecfdf5; color: #059669; padding: 3px 10px; border-radius: 9999px; font-size: 12px; font-weight: 700; display: inline-block;" th:text="${instructorStatus}">
                       Active
                     </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; border-top: 1px dashed #e2e8f0;">Download Invoice:</td>
+                  <td style="padding: 8px 0; color: #0f172a; font-weight: 600; text-align: right; font-size: 14px; border-top: 1px dashed #e2e8f0;">
+                    <a th:href="${invoiceDownloadPath}" target="_blank" style="background: #0f172a; color: #ffffff; text-decoration: none; padding: 13px 30px; border-radius: 10px; font-weight: 600; font-size: 14px; display: inline-block; border: 1px solid #1e293b;">
+                      Download Invoice &rarr;
+                    </a>
                   </td>
                 </tr>
               </table>
